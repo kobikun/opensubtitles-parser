@@ -3,8 +3,7 @@
 echo 'Downloading dataset...'
 
 #download dataset first,
-http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fko.tar.gz
-#wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles/en.tar.gz
+wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fko.tar.gz
 
 echo 'Unzipping dataset...'
 
@@ -20,5 +19,5 @@ find . -name '*.gz' -exec gunzip '{}' \;
 echo 'Running python preprocessor...'
 
 #run python pre-processor
-python opensubtitleparser.py
+python opensubtitleparser.py --rootXmlDir OpenSubtitles2016/ --dataDir data.ko/subtitle_ko_
 

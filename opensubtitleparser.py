@@ -67,7 +67,7 @@ def extractTokenizedPhrases(xmlFilePath, dataDirFilePath):
         A = []
         for node in child.getiterator():
             if node.tag == 'w':
-                    A.append(node.text.encode('ascii', 'ignore').replace('-', ''))
+                    A.append(node.text.encode('utf-8', 'ignore').replace('-', ''))
         text = " ".join(A)
         text = cleanText(text)
         try:
